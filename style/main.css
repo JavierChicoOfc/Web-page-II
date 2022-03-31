@@ -1,0 +1,412 @@
+/*[----------------------CSS file for main page----------------------]*/
+
+/*[-----------Classes-----------]*/
+
+/*[Experiences]*/
+
+.feed_centered{
+    text-align: center;
+    margin: auto 20% auto 20%;
+    background-color: rgb(233, 227, 227);
+    border-radius: 15px;
+}
+
+#reload_button{
+    border-radius: 100px;
+    margin-top: 10px;
+}
+
+.feed_item{
+    text-align: center;
+}
+
+.feed_top{
+    margin: 0px auto 10px auto;
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.feed_user_info{
+    margin: auto;
+    display: inline-flex;
+    align-items: center;
+}
+
+.feed_user_img{
+    margin-right: 10px;
+    width: 75px;
+    height: 75px;
+    border-radius: 15px;
+}
+
+.feed_date{
+    display: inline-flex;
+    align-items:center;
+    margin:auto;
+}
+
+.feed_img{
+    width: 70%;
+    border-radius: 20px;
+}
+
+
+.feed_bottom{
+    margin: 0px auto auto auto;
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.icon_and_text{
+    margin: auto;
+    display: inline-flex;
+    align-items: center;
+}
+
+.feed_coment_section{
+    text-align: center;
+    margin: auto;
+}
+
+.feed_post_comment{
+    margin: auto 15% auto 15%;
+    background-color: rgb(212, 204, 204);
+    border-radius: 15px;
+}
+
+.comment_section{
+    margin: 0px auto 15px auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.comment_icon_button{
+    margin-left: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.comment_body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.comment_user_img{
+    margin-left: 30%;
+    width: 75px;
+    height: 75px;
+    border-radius: 15px;
+}
+
+.comment_text_box{
+    width: 500px;
+    margin-right: 50px;
+    background-color:rgb(233, 227, 227);
+    border-radius: 10px;
+    text-align: left;
+    align-items: center;
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+.feed_user_comment{
+    margin: auto 15% auto 15%;
+    background-color: rgb(212, 204, 204);
+    border-radius: 15px;
+    height: 200px;
+}
+
+
+::-moz-placeholder {
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    font-style: italic;
+}
+
+  
+.user_comment_button{
+    background-color: rgb(248, 75, 106);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    filter: drop-shadow(5px 5px 10px #444);
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+/*[Animations]*/
+
+@keyframes rotate {
+
+    from {transform: rotate(0deg)}
+    to {transform: rotate(360deg)}
+    
+}
+
+#reload_icon{
+    margin:auto;
+    height: 40px;
+    width: 40px;
+}
+    
+.reload_animation {
+    
+    margin:auto;
+    height: 40px;
+    width: 40px;
+
+    animation-name: rotate;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-play-state: running;
+}
+     
+.fade_in_text {
+    margin: auto;
+    width: 50%;
+    margin-top: 150px;  
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    color: black;
+    animation: fadeIn linear 7s;
+    -webkit-animation: fadeIn linear 7s;
+    -moz-animation: fadeIn linear 7s;
+    -o-animation: fadeIn linear 7s;
+    -ms-animation: fadeIn linear 7s;
+}
+
+.title_anim_div{
+    width: 110%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wordCarousel {
+    margin: auto;
+    width: 49%;
+    margin-top: 150px;  
+    font-size: 45px;
+    text-align: center;
+    align-items: bottom;
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-weight: 600;
+  }
+.wordCarousel div {
+    overflow: hidden;
+    position: relative;
+    float: right;
+    height: 65px;
+    padding-top: 10px;
+    margin-top: -10px;
+}
+.wordCarousel div li {
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    height: 45px;
+    margin-bottom: 45px;
+    display: block;
+}
+
+.flip2 {
+-webkit-animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+        animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+
+.flip3 {
+-webkit-animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+        animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+
+.flip4 {
+-webkit-animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+        animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+
+@-webkit-keyframes flip2 {
+0% {
+    margin-top: -180px;
+}
+5% {
+    margin-top: -90px;
+}
+50% {
+    margin-top: -90px;
+}
+55% {
+    margin-top: 0px;
+}
+99.99% {
+    margin-top: 0px;
+}
+100% {
+    margin-top: -270px;
+}
+}
+
+@keyframes flip2 {
+0% {
+    margin-top: -180px;
+}
+5% {
+    margin-top: -90px;
+}
+50% {
+    margin-top: -90px;
+}
+55% {
+    margin-top: 0px;
+}
+99.99% {
+    margin-top: 0px;
+}
+100% {
+    margin-top: -270px;
+}
+}
+@-webkit-keyframes flip3 {
+0% {
+    margin-top: -270px;
+}
+5% {
+    margin-top: -180px;
+}
+33% {
+    margin-top: -180px;
+}
+38% {
+    margin-top: -90px;
+}
+66% {
+    margin-top: -90px;
+}
+71% {
+    margin-top: 0px;
+}
+99.99% {
+    margin-top: 0px;
+}
+100% {
+    margin-top: -270px;
+}
+}
+@keyframes flip3 {
+0% {
+    margin-top: -270px;
+}
+5% {
+    margin-top: -180px;
+}
+33% {
+    margin-top: -180px;
+}
+38% {
+    margin-top: -90px;
+}
+66% {
+    margin-top: -90px;
+}
+71% {
+    margin-top: 0px;
+}
+99.99% {
+    margin-top: 0px;
+}
+100% {
+    margin-top: -270px;
+}
+}
+@-webkit-keyframes flip4 {
+0% {
+    margin-top: -360px;
+}
+5% {
+    margin-top: -270px;
+}
+25% {
+    margin-top: -270px;
+}
+30% {
+    margin-top: -180px;
+}
+50% {
+    margin-top: -180px;
+}
+55% {
+    margin-top: -90px;
+}
+75% {
+    margin-top: -90px;
+}
+80% {
+    margin-top: 0px;
+}
+99.99% {
+    margin-top: 0px;
+}
+100% {
+    margin-top: -270px;
+}
+}
+@keyframes flip4 {
+0% {
+    margin-top: -360px;
+}
+5% {
+    margin-top: -270px;
+}
+25% {
+    margin-top: -270px;
+}
+30% {
+    margin-top: -180px;
+}
+50% {
+    margin-top: -180px;
+}
+55% {
+    margin-top: -90px;
+}
+75% {
+    margin-top: -90px;
+}
+80% {
+    margin-top: 0px;
+}
+99.99% {
+    margin-top: 0px;
+}
+100% {
+    margin-top: -270px;
+}
+}
+@media only screen and (max-width:600px){
+    .comment_text_box{
+        width: 300px;
+        margin-right: 50px;
+    }
+    .title_anim_div{
+        width: 100%;
+    }
+}

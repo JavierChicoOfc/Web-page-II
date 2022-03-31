@@ -1,0 +1,88 @@
+/*[----------------------CSS file for experiences----------------------]*/
+
+/*[------------------Classes--------------------]*/
+
+.button2{
+    background-color: rgb(248, 75, 106);
+    color: rgb(255, 255, 255);
+    width:10%;
+    cursor: pointer;
+    padding: 7px 14px;
+    border-radius: 10px;
+    filter: drop-shadow(5px 5px 10px #444);
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.button_br_more{
+    margin: auto;
+    text-align: center;   
+}
+
+#ImgPreV3{
+    width: 441px;
+    height: 248px;
+    visibility: hidden;
+    display: none;
+    margin: auto;
+}
+
+
+#div_exp{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 70%;
+    margin: auto;
+}
+
+.exp_user_div{
+    text-align: center;
+}
+
+.img_experience{
+    width: 33vw;
+    border-radius: 15px;
+}
+
+.img_delete{
+    width: 20px;
+    height: 20px;
+    border-radius: 40px;
+    border-color: aliceblue;
+    margin-top: 8px;
+}
+
+.description_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.description_div{
+    margin-left: 20px;
+    width: 600px;
+}
+
+.trash_div{
+    text-align: right;
+    margin-left: 10px;
+    width: 10px;
+}
+
+.search_bar_margin{
+    text-align: center;
+    width: 60%;
+    margin: auto;
+}
+
+@media only screen and (max-width:600px){
+
+    .button2{
+        width: 80px;
+    }
+    .description_div{
+        width: 150px;
+    }
+}

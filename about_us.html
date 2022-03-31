@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Configuration-->
+    <title>Expell</title>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="script/main.js"></script>
+    <script src="script/cookies.js"></script>
+    <script src="script/shared.js"></script>
+    <!--CSS Files Used-->
+    <link rel="stylesheet" href="style/shared.css">
+    <link rel="stylesheet" href="style/fonts.css">
+    <link rel="stylesheet" href="style/pop_up.css">
+</head>
+<body onload="set_up();checkDarkMode()">
+    <!--[HEADER]-->
+    <header>
+        <nav class="nav">
+            <div class="company_identity">
+                <img src="images/Icon/app_logo.png" class="app_logo_img" alt="app logo">
+                <p class="company_font">Expell</p>
+            </div>
+
+            <div class="menu_margin">
+                <a href="main.html" class="nav_links">Home</a>
+                <a href="experiences.html" class="nav_links">Experiences</a>
+                <a href="ranking.html" class="nav_links">Ranking</a>
+            </div>
+            
+            <div id="user_signin">
+                <img id="user_img" src="https://img.icons8.com/external-bearicons-glyph-bearicons/64/000000/external-User-essential-collection-bearicons-glyph-bearicons.png" alt="profile of current user"/>
+                <p id="NameUser"></p>
+                <button class="signin_button" id="signin__button" onclick='location.href="signin.html"'>Sign In</button>
+                <div id="dropdown">
+                    <button id="button_settings" onclick ="myFunction();" class="dropbtn">Settings</button>
+                    <div id ="myDropdown" class = "dropdown_content">
+                        <a class="button_settings " onclick="setTextUser();location.href='#popupUserInf'">Profile</a>
+                            
+                        <!--<button onclick="setTextUser();location.href='#popupUserInf'" class="button_settings subtitle_text_font">Profile</button>-->
+                        <a class=" button_settings" onclick="location.href='#popupOut'">
+                            Log Out
+                        </a>
+                        <a class=" button_settings" onclick="darkMode(false)">
+                            Dark Mode
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--[Log Out POP UP]-->
+    <div id="popupOut" class="overlay">
+        <div class="popupBody">
+            <a class="cerrar" href="#">&times;</a>
+            <div class="popupContent">
+                <br>
+                <h2 class="title_text_font2">¿SEGURO QUE DESEA CERRAR SESION?</h2>
+                <br><br><br><br><br><br><br><br><br><br><br>
+                <button onclick="logOut()" class="button_popups">
+                    Aceptar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="popupExperiences" class="overlay">
+        <div class="popupBody">
+            <h2 class="title_text_font_nomargin"> Experiences</h2>
+            <a class="cerrar" href="#">&times;</a>
+            <div class="popupContent">
+                <div id ="experiences_user">
+                    <form id ="experience_form" style="text-align: center;">
+                        <br><br>
+                        <label class="text_font" for="experience_description">Experience description</label>
+                        <br><br>
+                        <input class="description_textbox" id="experience_description" required type="text" name="experience_description">
+                        <br><br>
+                        <label class="text_font" for="new_experience" >Add a new experience in URL format (png o jpg)</label>
+                        <br><br>
+                        <input class="url_textbox" type="url" id="new_experience" name="new_experience" required onchange="preview4()">
+                        <br><br>
+                        <img src = "https://lledogrupo.com/wp-content/uploads/2018/04/white-img.jpg" id = "ImgPreV3" alt="preview of the experience">
+                        <br>
+                        <div class="text_center">
+                            <button id = "button_plus" onclick="add_experience()">
+                                <img src="https://img.icons8.com/material-rounded/96/000000/plus--v2.png" alt="image added by the user"/>
+                            </button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--[About Us]-->
+    <h1 class="title_text_font">What is <span class="company_font2">Expell</span>?</h1>
+    <br>
+    <div id="description">
+        <p class="text_font">
+            Expell is an interactive social network based on the interaction between users with their most recent experiences. Also it
+            offers the possibility of evaluating the experiences of other users and commenting on them to develop a suitable environment
+            for all people who love to travel and to live incredible experiences.
+            <br><br>
+            Expell emerged as a small <span class = "text_font_italic">startup</span> in 2018 started by a group of young people
+            from the company <span class = "text_font_italic">Techy</span> that would quickly take shape and materialize
+            in 2020. At this point, Expell began to welcome its first users and the team expanded rapidly, willing to
+            meet the needs of the volume of active users.
+
+        </p>
+    </div>
+    <!--[Change Data POP UP]-->
+    <div id="popupUserInf" class="overlay">
+        <div class="popupBody">
+            <h2 class="title_text_font">Account Information</h2>
+            <a class="cerrar" href="#">&times;</a>
+            <div class="popupContent">
+                <br><br>
+                <h3 class="subtitle_text_font_centered">User: </h3>
+                <div class="div_background">
+                    <p class="text_font" id="usern"></p>
+                </div>
+                <br>
+                <h3 class="subtitle_text_font_centered">Email: </h3>
+                <div class="div_background">
+                    <p class="text_font" id="email"></p>
+                </div>
+                <br>
+                <h3 class="subtitle_text_font_centered">Profile Image: </h3>
+
+                <img id="img" src="https://img.icons8.com/external-bearicons-glyph-bearicons/64/000000/external-User-essential-collection-bearicons-glyph-bearicons.png" alt="" class="img_settings">
+                <br><br>
+                <h1 class="title_text_font">Change User Data</h1>
+                <form class="text_center" id="Change_form">
+                    <br><br>
+                    <label class="text_font" for="username">Change user name:</label>
+                    <input id="username" type="text" name="username" maxlength="10">
+                    <br><br>
+                    <label for="im_per" class="text_font">Stick the url of the image (only jpg or png):</label>
+                    <br><br>
+                    <input type="url" id="im_per" name="im_per" onchange="preview2()" class="fields">
+                    <br><br>
+                    <img src="https://lledogrupo.com/wp-content/uploads/2018/04/white-img.jpg" id="ImgPreV2" alt="preview profile image of the current user">
+                    <br><br>
+                    <div class="text_center">
+                        <button onclick="changeData(365)" class="button_popups">
+                            Save
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <!--[Footer]-->
+    <footer class="footer">
+        <div class="company_identity">
+            <img src="images/Icon/app_logo.png" class="app_logo_img" alt="app logo">
+            <h1 class="company_font">Expell</h1>
+        </div>
+
+        <div class="menu_margin">
+            <a href="privacy.html" class="nav_links">Privacy</a>
+            <a href="about_us.html" class="nav_links">About Us</a>
+            <a href="help.html" class="nav_links">Help</a>
+        </div>
+
+        <div id="footer_icons">
+            <a href="https://www.twitter.com" target="_blank">
+                <img class="icon_footer" src="images/Icon/twitter_icon.png" id="twitter" title="Twitter" onmouseover="hoverTwi(this)" onmouseout="unhoverTwi(this)" alt="twitter icon">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img class="icon_footer" src="images/Icon/instagram_icon.png" id="instagram" title="Instagram" onmouseover="hoverInst(this)" onmouseout="unhoverInst(this)" alt="instagram icon">
+            </a>
+            <a href="help.html" target="_blank">
+                <img class="icon_footer" src="images/Icon/question_icon.png" id="FAQ" title="FAQ" onmouseover="hoverF(this)" onmouseout="unhoverF(this)" alt="question icon">
+            </a>
+            <a href="https://www.tuabogadodefensor.com/derechos-autor-web/" target="_blank">
+                <img class="icon_footer" src="images/Icon/copyright_icon.png" id="Copyright" title="Copyright" onmouseover="hoverC(this)" onmouseout="unhoverC(this)" alt="copyright icon">
+            </a>     
+        </div>            
+    </footer>
+</body>
+</html>

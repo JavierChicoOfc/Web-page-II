@@ -1,0 +1,548 @@
+/*[----------------------CSS file for shared elements----------------------]*/
+
+/* Note: we use this CSS to define the style of multiple elements which are common to all files */
+
+/*[--------Basic elements--------]*/
+
+body { 
+    background-color: rgb(243, 237, 237);
+    margin: 0px 0px 0px 0px;
+}
+
+nav{
+    background-color: rgb(233, 227, 227);
+    display: flex;
+    height: 125px;
+    font-size: 25px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(248, 75, 106);
+}
+
+footer{
+    background-color: rgb(233, 227, 227);
+    display: flex;
+    height: 125px;
+    font-size: 25px;
+    bottom: 0px;
+    width: 100%;
+}
+
+button:hover{
+    background-color: rgb(77, 240, 150);
+    opacity: 0.6;
+}
+
+/*[--------Header--------]*/
+
+/*[Company Name and Logo]*/
+
+.company_identity{
+    display: flex;
+    width: 20%;
+}
+
+.app_logo_img{
+    margin: 2% 2% 2% 8%;
+    height: 100px;
+    width: 100px;
+}
+
+/*[Nav Links]*/
+
+.menu_margin{
+    text-align: center;
+    width: 60%;
+    margin: auto;
+}
+
+.nav_links{
+    font-family: 'Quicksand',sans-serif;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: auto 8% auto 8%;
+}
+
+/*[Account]*/
+
+#user_signin{
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    width: 366.433px;
+    height: 125px;
+}
+
+#user_img{
+    margin: auto 0px auto 20px;
+    width: 75px;
+    height: 75px;
+    border-radius: 15px;
+}
+
+.div_background{
+    background-color: rgb(109, 109, 109);
+    text-align: center;
+    width: 50%;
+    height: 30px;
+    margin: auto;
+    border-radius: 15px;
+}
+
+/*[Buttons]*/
+
+.signin_button {
+    background-color: rgb(248, 75, 106);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    filter: drop-shadow(5px 5px 10px #444);
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    margin: 12px;
+}
+
+#signin__button{
+  visibility: visible;
+  display: flex;
+}
+
+#button_settings:hover{
+    color: rgb(250, 242, 247);
+}
+
+/*[Dropdown]*/
+
+#dropdown{
+    visibility: hidden;
+    display: none
+}
+
+.dropdown_content{
+    display: none;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0,2);
+    z-index: 1;
+    background-color: rgb(233, 227, 227);
+    border-radius: 15px;
+}
+
+.dropdown_content a{
+    display: block;
+    font-size: 16px;
+    font-family:'Quicksand',sans-serif;
+    padding: 6px 0px;
+    margin: 10px 20px 10px 10px;
+    text-decoration: none;
+    
+}
+
+.dropbtn{
+    background-color: rgb(248, 75, 106);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+.show{
+    display: block;
+}
+
+/*[--------Footer--------]*/
+
+.icon_footer{
+    margin:auto;
+    height: 40px;
+    width: 40px;
+}
+
+#footer_icons{
+    text-align: center;
+    width: 20%;
+    margin: auto 0px auto 0px;
+}
+
+.text_align { 
+    text-align: center;
+    color:rgb(119, 212, 169);
+    margin:auto;
+    font-size: 50px;
+    font-family: 'Quicksand',sans-serif;
+}
+
+/*[--------Alert--------]*/
+
+
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    display: none;
+    border-radius: 15px;
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    z-index: 100;
+    margin: auto;
+    position: relative;
+}
+  
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+.closebtn:hover {
+    color: black;
+}
+
+/*[--------Common Settings--------]*/
+
+.text_center{
+    text-align: center;
+}
+
+.img_settings{
+    margin-top: 30px;
+    width: 23vw;
+}
+
+.icon_button{
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+#ImgPreV2{
+    width:100px;
+    height: 100px;
+    visibility: hidden;
+    display: none;
+    margin: auto;
+}
+
+#button_settings{
+    text-align: center;
+    align-items: center;
+    font-size: 20px;
+    line-height: 30px;
+    height: 35px;
+    width: 100px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    margin: 12px;
+}
+
+.button_settings{
+    background-color: rgb(248, 75, 106);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    width: 100px;
+    border-radius: 10px;
+    filter: drop-shadow(5px 5px 10px #444);
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+}
+
+.button_settings:hover{
+    color: white;
+    background-color: #2980B9;
+}
+
+
+#NameUser{
+    visibility: hidden;
+    display: none;
+    font-size: 20px;
+    font-family:'Quicksand',sans-serif;
+    margin: auto auto auto 10px;
+}
+
+.browse_more_button2{
+    background-color: rgb(248, 75, 106);
+    color: rgb(255, 255, 255);
+    padding: 14px 20px;
+    cursor: pointer;
+    width: 20%;
+    border-radius: 10px;
+    filter: drop-shadow(5px 5px 10px #444);
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.button_popups{
+    background-color: rgb(248, 75, 106);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 10px;
+    filter: drop-shadow(5px 5px 10px #444);
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    height: 35px;
+}
+
+/*[About Us]*/
+
+#description{
+    margin: auto 20% auto 20%;
+}
+
+/*[Fill input fields]*/
+
+.fields {
+    width: 20%;
+    padding: 12px;
+    border: 0px ;
+    border-bottom: 1px solid rgb(120, 158, 142);
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+/*[Dark Mode]*/
+
+.nav_dark_mode{
+    background-color: #3c3c3c;
+}
+
+.body_dark_mode{
+    background-color: #1e1e1e;
+    color: rgb(190, 185, 185);
+}
+
+.footer_dark_mode{
+    background-color: #3c3c3c;
+}
+
+.nav_links_dark_mode{
+    color: rgb(190, 185, 185);
+}
+
+.name_user_dark_mode{
+    color: rgb(190, 185, 185);
+}
+
+.feed_dark_mode{
+    background-color: #252526;
+}
+
+.feed_user_comment_dark_mode{
+    margin: auto 15% auto 15%;
+    border-radius: 15px;
+    height: 200px;
+    background-color: rgb(75, 75, 75);
+}
+
+.feed_post_comment_dark_mode{
+    margin: auto 15% auto 15%;
+    border-radius: 15px;
+    background-color: rgb(75, 75, 75);
+}
+
+.comment_text_box_dark_mode{
+    width: 500px;
+    height: 65px;
+    margin-right: 50px;
+    border-radius: 10px;
+    text-align: left;
+    align-items: center;
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    margin-left: 15px;
+    background-color: #333333;
+}
+
+.title_text_anim_dark_mode{
+    color:rgb(190, 185, 185);;
+}
+
+.subtitle_text_font_dark_mode{
+    color:rgb(223, 222, 222);;
+}
+
+.title_text_font_dark_mode{
+    color: #818181;
+}
+
+.title_text_font_nomargin_dark_mode{
+    color: #818181;
+}
+
+.user_comment_button_dark_mode{
+    cursor: pointer;
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    filter: drop-shadow(5px 5px 10px #444);
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 20px;
+    background-color: rgb(216, 216, 216);;
+    color: rgb(248, 75, 106);
+}
+
+.browse_more_button2_dark_mode{
+    background-color: rgb(216, 216, 216);;
+    color: rgb(248, 75, 106);
+}
+
+.ranking_experiences_dark_mode{
+    background-color: rgb(75, 75, 75);
+}
+
+.button2_dark_mode{
+    background-color: rgb(216, 216, 216);;
+    color: rgb(248, 75, 106);
+}
+
+.dropbtn_dark_mode{
+    background-color: rgb(216, 216, 216);;
+    color: rgb(248, 75, 106);
+}
+
+.button_settings_dark_mode{
+    background-color: rgb(216, 216, 216);;
+    color: rgb(248, 75, 106);
+}
+
+@media only screen and (max-width:600px){
+
+
+    .company_identity{
+        display: block;
+        width: 20%;
+    }
+    .app_logo_img{
+        height: 80px;
+        width: 80px;
+    }
+
+    .menu_margin{
+        text-align: left;
+    }
+
+    .nav_links{
+        margin: auto 15px auto auto;
+    }
+
+    .wordCarousel{
+        font-size: 25px;
+        width: 90%;
+    }
+
+    .feed_centered {
+        margin: auto 5% auto 5%;
+    }
+
+    #reload_icon{
+        height: 25px;
+        width: 25px;
+    }
+
+    .feed_top {
+        width: 80%;
+    }
+
+    .feed_img{
+        width: 80%;
+    }
+
+    .feed_user_img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .feed_bottom {
+        width: 85%;
+    }
+
+    .feed_user_comment {
+        margin: auto 5% auto 5%;
+        border-radius: 15px;
+        height: 200px;
+    }
+
+    .comment_user_img {
+        margin-left: 60%;
+        width: 70px;
+        height: 70px;
+    }
+
+    .comment_body {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .comment_text_box {
+        height: 65px;
+    }
+
+    .user_comment_button {
+        margin-top: 0px;
+    }
+
+    .feed_user_comment {
+        margin: auto 5% auto 5%;
+        border-radius: 15px;
+        height: 210px;
+    }
+
+    .feed_post_comment {
+        margin: auto 5% auto 5%;
+        border-radius: 15px;
+    }
+
+    .browse_more_button2 {
+        width: 40%;
+    }
+
+    .comment_text_box_dark_mode{
+        width: 300px;
+        height: 65px;
+        background-color: #333333;
+    }
+
+    .feed_user_comment_dark_mode{
+        margin: auto 5% auto 5%;
+        height: 230px;
+        background-color: rgb(75, 75, 75);
+    }
+    
+    .feed_post_comment_dark_mode{
+        margin: auto 5% auto 5%;
+        background-color: rgb(75, 75, 75);
+    }
+}

@@ -1,0 +1,166 @@
+/*[----------------------CSS file for Fonts----------------------]*/
+
+/* Note: we use this CSS to define the style of the fonts used in the protect, common to all files */
+
+/*[-----------Classes-----------]*/
+
+/*[Company Font]*/
+
+.company_font{
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-size: 40px;
+    font-weight: 600;
+    color:rgb(44, 101, 207);
+    margin: auto 5% auto 5%;
+}
+
+.company_font2{
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-size: 40px;
+    font-weight: 600;
+    color:rgb(44, 101, 207);
+    margin: auto;
+}
+
+/*[Title Fonts]*/
+
+.title_text_font{  
+    margin: auto;
+    width: 50%;
+    margin-top: 150px;  
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.title_text_font2{    
+    margin: auto;
+    color: rgb(2, 2, 2);
+    font-size: 26px;
+    text-align: center;
+    font-family:'Quicksand',sans-serif;
+}
+
+.title_text_font_nomargin{  
+    margin: auto;
+    width: 50%;
+    margin-top: 20px;
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.ranking_title_text_font{  
+    font-size: 45px;
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    color: rgb(248, 75, 106);
+    margin: 0px auto 0px auto;
+}
+
+.subtitle_text_font{    
+    margin: auto;
+    font-size: 26px;
+    text-align: justify;
+    font-family:'Quicksand',sans-serif;
+}
+
+.subtitle_text_font_centered{    
+    font-size: 26px;
+    text-align: center;
+    font-family:'Quicksand',sans-serif;
+    color: #818181;
+}
+
+/*[Common text Fonts]*/
+
+.text_font{
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.text_font_margin_left{
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+.text_font_italic{
+    font-family: 'Quicksand',sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.text_font_date{
+    font-family: 'Quicksand',sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.comment_user_text_font{
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    margin-left: 15px;
+    text-align: left;
+}
+
+.ranking_text_font{
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    text-align: center;
+}
+
+.user_ranking_text_font{
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+
+
+@media only screen and (max-width:600px){
+
+    .title_text_font_nomargin{
+        width: 100%;
+        font-size: 25px;
+    }
+
+    .title_text_font {
+        width: 80%;
+    }
+
+    .company_font {
+        font-size: 20px;
+        margin: auto auto auto 17px;
+    }
+    .comment_user_text_font {
+        margin: 80px auto auto -30px
+    }
+
+    .ranking_text_font{
+        font-size: 22px;
+    }
+
+    .img_ranking{
+        display: none;
+    }
+
+}

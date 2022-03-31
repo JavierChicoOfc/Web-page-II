@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Configuration-->
+    <meta charset="utf-8">
+    <title>Log-In</title>
+    <link rel="icon" href="images/Icon/logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.16.0/mapbox-gl.js'></script>
+    <script src="script/signin.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <!--CSS Files Used-->
+    <link rel="stylesheet" href="style/signin_signup.css">
+    <link rel="stylesheet" href="style/fonts.css">
+</head>
+<body> 
+    <div class="company_identity">
+        <img src="images/Icon/app_logo.png" class="app_logo_img" alt="app logo icon">
+        <p class="company_font">Expell</p>
+    </div>
+    <div class="form_div">
+        <div id="form_logIn">
+            <h1 class="title_font">Sign In</h1>
+            <p class="grey_text_font">Welcome back again!</p>
+            <br>
+            <form id="form_body">
+                <label class = "label_text_font" for="user"><b >User</b></label>
+                <br><br>
+                <input type="text" placeholder="Enter your user" name="user" required class="fields" id="user">
+                <br>
+                <label class = "label_text_font" for="password"><b>Password</b></label>
+                <br><br>
+                <input type="password" placeholder="Enter your password" name="password" required class="fields" id="password">
+                <br><br>
+                <button class="button_red" type="submit" onclick="sign_in()">Sing In</button>
+                <br><br>
+                <p class="grey_text_font"> or enter as a guest</p>
+                <br>
+                
+            </form>
+
+        </div>
+
+        
+        <button class="button_grey" onclick="location.href='main.html'">Enter as a guest</button>
+        
+        <div class="bottom_login">
+            <br>
+            <label class="grey_text_font">Forgot Password?</label>
+            <label class="label_text_font"><a href="signup.html"><strong>Sign up</strong></a></label>
+        </div>
+
+    </div>    
+</body>

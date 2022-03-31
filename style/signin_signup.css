@@ -1,0 +1,136 @@
+/*[-----------------CSS file for Sign-Up and Sign-In-----------------]*/
+
+/*[-----------Basic elements-----------]*/
+
+body { 
+    background-color: rgb(255, 255, 255);
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(248, 75, 106);
+}
+
+label {
+    text-align: left;
+}
+
+strong {
+    color: rgb(248, 75, 106);
+}
+
+/*[---------Classes---------]*/
+
+.company_identity{
+    text-align: center;
+}
+
+.app_logo_img{
+    margin: 3% auto 0px auto;
+    width: 5%;
+}
+
+.form_div {
+    text-align: center;
+}
+
+.fields {
+    width: 20%;
+    padding: 12px;
+    border: 0px ;
+    border-bottom: 1px solid rgb(120, 158, 142);
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+.fields:hover{
+    opacity: 0.6;
+}
+
+.button_red {
+    background-color: rgb(248, 75, 106);
+    color: rgb(255, 255, 255);
+    padding: 14px 20px;
+    cursor: pointer;
+    width: 20%;
+    border-radius: 10px;
+    filter: drop-shadow(5px 5px 10px #444);
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.button_grey {
+    background-color: rgb(88, 87, 87);
+    color: rgb(255, 255, 255);
+    padding: 14px 20px;
+    cursor: pointer;
+    width: 20%;
+    border-radius: 10px;
+    filter: drop-shadow(5px 5px 10px #444);
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+button:hover{
+    background-color: rgb(77, 240, 150);
+    opacity: 0.6;
+}
+
+/*[-----------Fonts-----------]*/
+
+.company_font{
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-size: 40px;
+    font-weight: 600;
+    color:rgb(83, 231, 231);
+    margin-top: 0px;
+}
+
+.title_font{
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    
+}
+
+.label_text_font{
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: rgb(248, 75, 106);
+}
+
+.grey_text_font{
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0px auto 0px auto;
+}
+
+/*[--------------------IDs-----------------------------]*/
+
+#ImgPreV2{
+    width:100px;
+    height: 100px;
+    visibility: hidden;
+    display: none;
+    margin: auto;
+}
+
+@media only screen and (max-width:600px){
+    .app_logo_img {
+        margin: auto;
+        width: 100px;
+        height: 100px;
+    }
+    .company_font {
+        font-size: 20px;
+        margin: auto;
+    }
+}

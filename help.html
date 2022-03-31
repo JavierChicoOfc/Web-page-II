@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Configuration-->
+    <title>Expell</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="script/main.js"></script>
+    <script src="script/cookies.js"></script>
+    <script src="script/shared.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap">
+    <!--CSS Files Used-->
+    <link rel="stylesheet" href="style/shared.css">
+    <link rel="stylesheet" href="style/fonts.css">
+    <link rel="stylesheet" href="style/pop_up.css">
+</head>
+<body onload="set_up();checkDarkMode()">
+    <!--[Header]-->
+    <header>
+        <nav class="nav">
+            <div class="company_identity">
+                <img src="images/Icon/app_logo.png" class="app_logo_img" alt="app logo">
+                <p class="company_font">Expell</p>
+            </div>
+
+            <div class="menu_margin">
+                <a href="main.html" class="nav_links">Home</a>
+                <a href="experiences.html" class="nav_links">Experiences</a>
+                <a href="ranking.html" class="nav_links">Ranking</a>
+            </div>
+            
+            <div id="user_signin">
+                <img id="user_img" src="https://img.icons8.com/external-bearicons-glyph-bearicons/64/000000/external-User-essential-collection-bearicons-glyph-bearicons.png" alt="profile of current user"/>
+                <p id="NameUser" class="name_user"></p>
+                <button class="signin_button" id="signin__button" onclick='location.href="signin.html"'>Sign In</button>
+                <div id="dropdown">
+                    <button id="button_settings" onclick ="myFunction()" class="dropbtn"> Settings
+                        <!--<img src="images/icons/settings_icon.png">-->
+                    </button>
+                    <div id ="myDropdown" class = "dropdown_content">
+                        <a class="button_settings " onclick="setTextUser();location.href='#popupUserInf'">Profile</a>
+                            
+                        <!--<button onclick="setTextUser();location.href='#popupUserInf'" class="button_settings subtitle_text_font">Profile</button>-->
+                        <a class=" button_settings" onclick="location.href='#popupOut'">
+                            Log Out
+                        </a>
+                        <a class=" button_settings" onclick="darkMode(false)">
+                            Dark Mode
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--[Help-->
+    <h1 class="title_text_font"><span class="company_font2">Expell</span> FAQ</h1>
+    <br>
+    <div id="description">
+        <div class="text_font">
+            <h2 class="subtitle_text_font">How to register in Expell?</h2>
+            <p class="text_font">Welcome to Expell, we are so thriving you want to join our family. In order to registrer, you need
+               to check the upper-right button and fill the form with required data. You will be prompted to fill in
+               your name, email address, a password which you have to keep secret and the URL of any image you like 
+               for your profile. Once completed these steps, you will be able to enjoy all the advantages of a full
+               category user!
+            </p>
+            <br>
+            <h2 class="subtitle_text_font">How to upload an experience?</h2>
+            <p class="text_font">First of all, to updload an experience you should be logged in. When you are logged in, you may go to
+               the 'Experiences' section and click the 'upload experience' button. Then you will be required to add 
+               the photography of the experience and provide a description for all people to read it.
+            </p>
+            <br>
+            <h2 class="subtitle_text_font">How to log in?</h2>
+            <p class="text_font">In order to log in, you have to clic on the upper-right button and fill the form with your
+               account credentials. Unfortunately, have you forgotten your password, you will not be able to
+               recover it due to security reasons.
+            </p>
+            <br>
+            <h2 class="subtitle_text_font">How to activate dark mode feature?</h2>
+            <p class="text_font">Simply check the upper-right button and select the 'dark mode' option :)</p>
+            <br>
+        </div>
+    </div>
+    <!--[Log Out POP UP]-->
+    <div id="popupOut" class="overlay">
+        <div class="popupBody">
+            <a class="cerrar" href="#">&times;</a>
+            <div class="popupContent">
+                <br>
+                <h2 class="title_text_font2">ARE YOU SURE YOU WANT TO QUIT?</h2>
+                <br><br>
+                <button onclick="logOut()" class="button_popups">
+                    Accept
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--[Change Data POP UP]-->
+    <div id="popupUserInf" class="overlay">
+        <div class="popupBody">
+            <h2 class="title_text_font">Account Information</h2>
+            <a class="cerrar" href="#">&times;</a>
+            <div class="popupContent">
+                <br><br>
+                <h3 class="subtitle_text_font_centered">User: </h3>
+                <p class="text_font" id="usern"></p>
+                <br>
+                <h3 class="subtitle_text_font_centered">Email: </h3>
+                <p class="text_font" id="email"></p>
+                <br>
+                <h3 class="subtitle_text_font_centered">Profile Image: </h3>
+                <img src="https://img.icons8.com/external-bearicons-glyph-bearicons/64/000000/external-User-essential-collection-bearicons-glyph-bearicons.png" alt="" class="img_settings" id="img">
+                <br><br>
+                <h1 class="title_text_font">Change User Data</h1>
+                <form class="text_center" id="Change_form">
+                    <br><br>
+                    <label class="text_font" for="username">Change user name:</label>
+                    <input id="username" type="text" name="username" maxlength="10">
+                    <br><br>
+                    <label for="im_per" class="text_font">Stick the url of the image (only jpg or png):</label>
+                    <br><br>
+                    <input type="url" id="im_per" name="im_per" onchange="preview2()" class="fields">
+                    <br><br>
+                    <img src="https://lledogrupo.com/wp-content/uploads/2018/04/white-img.jpg" id="ImgPreV2" alt="image added by the user">
+                    <br><br>
+                    <div class="text_center">
+                        <button onclick="changeData(365)" class="button_popups">
+                            Save
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--[Footer]-->
+    <footer class="footer">
+        <div class="company_identity">
+            <img src="images/Icon/app_logo.png" class="app_logo_img" alt="app logo">
+            <h1 class="company_font">Expell</h1>
+        </div>
+
+        <div class="menu_margin">
+            <a href="privacy.html" class="nav_links">Privacy</a>
+            <a href="about_us.html" class="nav_links">About Us</a>
+            <a href="help.html" class="nav_links">Help</a>
+        </div>
+
+        <div id="footer_icons">
+            <a href="https://www.twitter.com" target="_blank">
+                <img class="icon_footer" src="images/Icon/twitter_icon.png" id="twitter" title="Twitter" onmouseover="hoverTwi(this)" onmouseout="unhoverTwi(this)" alt="Twitter icon">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img class="icon_footer" src="images/Icon/instagram_icon.png" id="instagram" title="Instagram" onmouseover="hoverInst(this)" onmouseout="unhoverInst(this)" alt="Instagram icon">
+            </a>
+            <a href="help.html" target="_blank">
+                <img class="icon_footer" src="images/Icon/question_icon.png" id="FAQ" title="FAQ" onmouseover="hoverF(this)" onmouseout="unhoverF(this)" alt="FAQ icon">
+            </a>
+            <a href="https://www.tuabogadodefensor.com/derechos-autor-web/" target="_blank">
+                <img class="icon_footer" src="images/Icon/copyright_icon.png" id="Copyright" title="Copyright" onmouseover="hoverC(this)" onmouseout="unhoverC(this)" alt="Copyright icon">
+            </a>
+        </div>           
+    </footer>
+</body>
+</html>
